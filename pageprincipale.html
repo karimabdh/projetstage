@@ -1,0 +1,152 @@
+<!DOCTYPE htPml>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style1.css">
+    <link rel = "preconnect" href = "https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Garage of Autric Didier</title>
+<body>
+ <header>
+    <a href="#" class="logo"><span>G</span>arage</a>
+    <ul class="navbar">
+        <li><a href="#banniere" onclick="toggleMenu();">Accueil</a></li>
+        <li><a href="#apropos" onclick="toggleMenu();">A propos</a></li>
+        <li><a href="#experts" onclick="toggleMenu();">Experts</a></li>
+        <li><a href="#temoignage" onclick="toggleMenu();">Temoignages</a></li>
+        <a href="sub.html" class="Dev" onclick="toggleMenu();">Devis/Renseignement</a>
+    </ul>
+ </header>
+<section class="banniere" id="banniere">
+    <div class="contenu">
+        <h2 class="grost">Garage privé</h2>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos blanditiis vel veritatis odio alias maiores animi culpa eos cupiditate! Beatae nostrum incidunt, quod necessitatibus dolorem ipsam. Architecto ut veniam sed?</p>
+        <a href="contactus.html" class="btn1">Les voitures de collections</a>
+        <a href="#temoignage" class="btn2">Les témoignages</a>
+    </div>
+    </section>
+
+    <section class="apropos" id="apropos">
+        <div class="row">
+            <div class="col50">
+                <h2 class="titre-texte"><span>A</span> propos de nous </h2>
+                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus quae unde eum soluta sunt veritatis. Magnam, est illum expedita dicta ullam corporis, officiis ad consectetur reprehenderit fugit doloribus cumque saepe!
+                </p>
+            </div class="col50">
+            <div class="img">
+                <img src="./images/Car1.jpg" alt="images" width="500">
+            </div class="img">
+        </div>
+    </section class="apropos" id="apropos">
+
+    <section class="experts" id="experts">
+
+        <div class="titre">
+        <h2 class="titre-texte"><span>N</span>os  <span>E</span>xperts</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. </p>
+        </div>
+        
+        
+        <div class="contenu">
+            <div class="box">
+                <div class="inbox">
+                    <img src="./images/AutricD.jpg" alt="" width="240">
+                </div>
+                <div class="text">
+                    <h3>Bart Simpson, directeur technique </h3>
+                    <p></p>
+                </div>
+            </div>
+        </div>
+    </section class="experts" id="experts">
+    
+
+    <section class="temoignage" id="temoignage">
+        <div class="titre blanc">
+            <h2 class="titre-texte">Que Disent Nos <span>C</span>lients</h2>
+            <p>Les clients et leurs avis sont très important chez vous par rapport aux jugements qu'on porte sur eux. <br> Voici des témoignages récents :</p>
+        </div>
+        <div class="contenu">
+            <div class="box">
+                <div class="imbox">
+                    <img src="./images/unknown.jpg" alt="">
+                </div>
+                <div class="text">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod temporLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                    <h3>DJELLOULI Kamel</h3>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imbox">
+                    <img src="./images/unknown.jpg" alt="">
+                </div>
+                <div class="text">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod temporLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                    <h3>AUFAUVRE Cyril</h3>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imbox">
+                    <img src="./images/unknown.jpg" alt="">
+                </div>
+                <div class="text">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod temporLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                    <h3>Patrick Biaggini</h3>
+                </div>
+            </div>
+        </div>
+     
+
+    </section class="temoignage" id="temoignage">
+
+    <section class="devis" id="devis">
+        
+   
+    <div class="voitures">
+        <p>Voici des voitures de collection que nous avons pu faire leur garage </p> <br><br><br>
+        <br><br><br>
+        <!--<img src="images/B0004418.JPG" alt="voiture1" width="500">
+        <img src="images/B0004419.JPG" alt="voiture1" width="500">
+        <img src="images/13.png" alt="voiture1" width="500">
+        <img src="images/15.png" alt="voiture1" width="500"> -->
+    </div class="voitures">
+
+    <div class="vidfond">
+        <video autoplay ="autoplay" loop="infinite" src="images/B0004437.MP4"></video>
+    </div class="vidfond">
+
+    <div class="text">
+        <p>Convaincu ? <br> Rejoignez-nous en nous contactons sur l'onglet rouge "Devis/Renseignement" !</p> 
+    </div class="text">
+
+    
+
+    
+    </section class="devis" id="devis">
+
+    <div class="copyright">
+        <p>copyright 2021 <a href="https://viadeo.journaldunet.com/p/abdallah-karim-1758436">ABDALLAH Karim</a> Tous droits reservé</p>
+    </div>
+    <script type="text/javascript">
+        window.addEventListener('scroll', function()
+        {
+            const header =document.querySelector('header');
+            header.classList.toggle("sticky", window.scrollY > 0 );
+        });
+   
+        function toggleMenu(){
+            const tmenuToggle = document.querySelector('.menuToggle');
+            const navbar = document.querySelector('.navbar');
+            navbar.classList.toggle('active');
+            menuToggle.classList.toggle('active');
+        }
+    </script>
+  </body>
+</html>
+
+
+
+        

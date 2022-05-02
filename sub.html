@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="sub.css">
+    <title>Formulaire de contact</title>
+</head>
+
+<body>
+    <main>
+        <div class="stepper">
+        <div class="step--1 step-active"> 1ère étape</div>
+        <div class="step--2">2ème étape</div>
+        <div class="step--3">3ème étape</div>
+        <div class="step--4">...</div>
+        </div>
+            <form class="form form-active">
+        <div class="form--header-container">
+            <h1 class="form--header-title">
+                1ère étape</h1>
+  
+        <p class="form--header-text">
+         Vous souhaitez avoir des renseignements à propos de nos services ou bien un devis.
+        </p>
+      </div>
+      <!--<input type="text" placeholder="Name" />
+      <input type="text" placeholder="Email" />
+      <input type="text" placeholder="Password" /> -->
+
+      <input type="radio" class="devis" name="gender" value="Devis"/>Devis <br> <br>
+      <input type="radio" class="renseig" name="gender" value="Renseignement"/>Renseignement <br>
+      <button class="form__btn" id="btn-1">Suivant</button>
+    </form>
+    <form class="form">
+      <div class="form--header-container">
+        <h1 class="form--header-title">
+          2nde étape
+        </h1>
+  
+        <p class="form--header-text">
+          Ci-dessous veuillez rentrer vos coordonnées suivantes
+        </p>
+      </div>
+  
+      <input type="text" name="nom" placeholder="Votre Nom" />
+      <input type="text" name="prenom" placeholder="Votre prénom" />
+      <input type="text" name="number" placeholder="Votre numéro de téléphone" />
+      <input type="text" name="mail" placeholder="Votre adresse E-mail" />
+      <button class="form__btn" id="btn-2-prev">Précédent</button>
+      <button class="form__btn" id="btn-2-next">Suivant</button>
+    </form>
+    <form class="form">
+      <div class="form--header-container">
+        <h1 class="form--header-title">
+          Dernière étape
+        </h1>
+  
+        <p class="form--header-text">
+          Quels sont vos contraintes par rapport à votre projet.
+        </p>
+      </div>
+      <label>Quel est la durée de votre projet ? :<br>
+      </label><input type="radio" name="duree" value="-2M"/>Moins de 2 mois <br>
+      <input type="radio" name="duree" value="2&6M"/>Entre 2 et 6 mois <br>
+      <input type="radio" name="duree" value="+6M"/>Plus de 6mois <br> 
+      <br>
+      <label>Quel est le budget pour ce projet :<br>
+      </label><input type="radio" name="budget" value="-20K"/>Moins de 20 000€ <br>
+       <input type="radio" name="budget" value="20&60K"/>Entre 20 000 et 60 000€ <br>
+       <input type="radio" name="budget" value="+60K"/>Plus de 60 000€ <br><br>
+      </div class="budget">
+
+      <label> Message supplémentaire pour ce projet ? : <br>
+      </label><input type="text" name="messae" placeholder="Indiquez ici vos spécificités"/>
+      <!--<input type="text" placeholder="Linkedin" />
+      <input type="text" placeholder="Twitter" />
+      <input type="text" placeholder="Github" />-->
+      <button class="form__btn" id="btn-3">Envoyer</button>
+
+      <script type="text/javascript">
+
+const formBtn1 = document.querySelector("#btn-1")
+const formBtnPrev2 = document.querySelector("#btn-2-prev")
+const formBtnNext2 = document.querySelector("#btn-2-next")
+const formBtn3 = document.querySelector("#btn-3")
+
+// Button listener of form 1
+formBtn1.addEventListener("click", function(e) {
+	gotoNextForm(formBtn1, formBtnNext2, 1, 2)
+	e.preventDefault()
+  })
+  
+  // Next button listener of form 2
+  formBtnNext2.addEventListener("click", function(e) {
+	gotoNextForm(formBtnNext2, formBtn3, 2, 3)
+	e.preventDefault()
+  })
+  
+  // Previous button listener of form 2
+  formBtnPrev2.addEventListener("click", function(e) {
+	gotoNextForm(formBtnNext2, formBtn1, 2, 1)
+	e.preventDefault()
+  })
+  
+  // Button listener of form 3
+  formBtn3.addEventListener("click", function(e) {
+	document.querySelector(`.step--3`).classList.remove("step-active")
+	document.querySelector(`.step--4`).classList.add("step-active")
+	formBtn3.parentElement.style.display = "none"
+	document.querySelector(".form--message").innerHTML = `
+	 <h1 class="form--message-text">Merci pour votre confiance, nous allons vous contacter sous peu </h1>
+	 `
+	e.preventDefault()
+  })
+
+  const gotoNextForm = (prev, next, stepPrev, stepNext) => {
+	// Get form through the button
+	const prevForm = prev.parentElement
+	const nextForm = next.parentElement
+	const nextStep = document.querySelector(`.step--${stepNext}`)
+	const prevStep = document.querySelector(`.step--${stepPrev}`)
+	// Add active/inactive classes to both previous and next form
+	nextForm.classList.add("form-active")
+	nextForm.classList.add("form-active-animate")
+	prevForm.classList.add("form-inactive")
+	// Change the active step element
+	prevStep.classList.remove("step-active")
+	nextStep.classList.add("step-active")
+	// Remove active/inactive classes to both previous an next form
+	setTimeout(() => {
+	  prevForm.classList.remove("form-active")
+	  prevForm.classList.remove("form-inactive")
+	  nextForm.classList.remove("form-active-animate")
+	}, 1000)
+  }
+
+  
+      </script>
+
+    </form>
+    <div class="form--message"></div>
+  </main>
+
+</body>
+</html>

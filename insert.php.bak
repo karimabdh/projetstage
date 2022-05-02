@@ -1,0 +1,31 @@
+<?php
+
+
+include "connexion.php";
+
+    if (isset($_GET["gender"]) && isset($_GET["nom"]) && isset($_GET["prenom"]) && isset($_GET["phone"]) && isset($_GET["mail"]) && isset($_GET["duree"]) && isset($_GET["budget"]) && isset($_GET["messae"]) )
+			//if(isset($_GET["submit"]))
+		  {
+            $sexe= $_GET["gender"];
+            $nom= $_GET["nom"];
+            $prenom= $_GET["prenom"];
+            $phone= $_GET["phone"];
+            $mail= $_GET["mail"];
+            $duree= $_GET["duree"];
+            $budget= $_GET["budget"];
+            $message= $_GET["messae"];
+
+        
+
+           $req= mysqli_query($link, "insert into contact(sexe,nom,prenom,tel,mail,duree_projet,budget_projet,message) values ('$sexe','$nom','$prenom','$phone','$mail','$duree','$budget','$message')" );
+			//$req= mysqli_query($link, "INSERT INTO `contact`(`id`, `sexe`, `nom`, `prenom`, `tel`, `mail`, `duree_projet`, `budget_projet`, `message`) VALUES ('$sexe','$nom','$prenom','$phone','$mail','$duree','$budget','$message')");
+            if($req)
+            {
+                echo "merci";
+            }
+            else 
+            {
+                echo "erreur, veuillez réessayer";
+            }
+          }
+		  

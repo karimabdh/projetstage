@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="style_contact.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herve</title>
+  </head>
+
+
+  <body>
+
+  <div class="container">
+    <form action="insert.php" method="GET">
+            <p>Vous renseigner ou demander un devis ? Vous avez fait le bon choix de venir ici </p>
+           <!--<label>Sexe :</label>--><input type="radio" name="gender" value="Devis"/>Devis 
+                               <input type="radio" name="gender" value="Renseignement"/>Renseignement <br><br>
+
+            <div class="nom">
+              <label>Nom :</label><input type="text" name="nom" placeholder="Votre nom ici"/><br><br>
+            </div class="nom">
+            
+
+            <div class="prenom">
+            <label>Prénom :</label><input type="text" name="prenom" placeholder="Votre prénom ici"/><br><br>
+            </div class="prenom">
+
+            <div class="phone">
+            <label>N° de téléphone :</label><input type="number" name="phone" placeholder="Votre numéro ici"/><br><br>
+            </div class="phone">
+
+            <label>E-mail :</label><input type="email" name="mail" placeholder="Votre mail ici"/><br><br>
+
+
+            <div class="duree">
+            <label>Quel est la durée du projet :<br>
+            </label><input type="radio" name="duree" value="-2M"/>Moins de 2 mois <br>
+            <input type="radio" name="duree" value="2&6M"/>Entre 2 et 6 mois <br>
+            <input type="radio" name="duree" value="+6M"/>Plus de 6mois <br> 
+            <br>
+           </div class="duree">
+
+
+            <div class="budget">
+            <label>Quel est le budget pour ce projet :<br>
+            </label><input type="radio" name="budget" value="-20K"/>Moins de 20 000€ <br>
+             <input type="radio" name="budget" value="20&60K"/>Entre 20 000 et 60 000€ <br>
+             <input type="radio" name="budget" value="+60K"/>Plus de 60 000€ <br><br>
+            </div class="budget">
+
+             <div class="message">
+            <label> Message supplémentaire pour ce projet ? : <br>
+            </label><input type="text" name="messae" placeholder="Indiquez ici des spécificités"/><br><br> 
+            </div class="message">
+
+           <div class="envoyer"><input type="submit" name="submit" value="Envoyez !">Envoyez</div>  
+            
+    </form>     
+            <!--Ombres-->
+        <div class="shadow1"></div>
+        <div class="shadow1"></div>
+        <div class="shadow1"></div>
+        <div class="shadow1"></div>
+        <div class="shadow1"></div>
+      
+    
+  </div>
+  </body>
+
+</html>
